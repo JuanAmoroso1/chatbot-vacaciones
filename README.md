@@ -6,7 +6,7 @@ Desarrollado como Trabajo Práctico Integrador de Organización Empresarial.
 
 ## Integrantes
 - Juan Amoroso
-- Celina Medina
+- Hernan Avila
 
 ## Tecnologías
 - Python 3
