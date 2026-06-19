@@ -26,12 +26,16 @@ Desarrollado como Trabajo Práctico Integrador de Organización Empresarial.
 | Estado | Nombre | Descripción |
 |--------|--------|-------------|
 | 0 | INICIO | Solicita legajo del empleado |
-| 1 | ESPERANDO_FECHAS | Solicita fecha y días |
-| 2 | VERIFICANDO_SALDO | Verifica días disponibles (automático) |
-| 3 | ESPERANDO_SUPERVISOR | Aguarda decisión del supervisor |
-| 4 | FINALIZADO | Muestra resultado y cierra |
+| 1 | IDENTIFICADO | Legajo validado, solicita fecha de inicio |
+| 2 | SALDO_VERIFICADO | Fecha de inicio válida, solicita fecha de fin |
+| 3 | FECHAS_CONFIRMADAS | Ambas fechas válidas, solicita confirmación |
+| 4 | ENVIADO_SUPERVISOR | Solicitud enviada, aguarda decisión del supervisor |
+| 5 | FINALIZADO_APROBADO | Supervisor aprobó, notifica y registra |
+| 6 | FINALIZADO_RECHAZADO | Solicitud rechazada, notifica motivo |
 
 ## Casos de prueba
 - **Legajo 1001** (Ana García, 15 días) — camino feliz
-- **Legajo 1003** (María Fernández, 0 días) — rechazo automático
-- **Legajo 9999** — legajo inexistente
+- **Legajo 1003** (María Fernández, 0 días) — rechazo automático por saldo insuficiente
+- **Legajo 9999** — legajo inexistente, reintenta
+- **Fecha retroactiva** — bot rechaza e indica que debe ser futura
+- **Fecha fin anterior a inicio** — bot rechaza el rango
