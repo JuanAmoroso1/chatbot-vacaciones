@@ -1,3 +1,2 @@
-legajo,nombre,fecha_inicio,dias_solicitados,estado1001,Ana García,15/07/2025,5,APROBADA
-1003,María Fernández,15/07/2025,5,RECHAZADA
-1003,María Fernández,15/07/2025,5,RECHAZADA
+legajo,nombre,fecha_inicio,fecha_fin,dias_solicitados,estado,motivo_rechazo,fecha_creacion
+1001,Ana García,15/07/2026,25/07/2026,8,APROBADA,,19/06/2026 20:00
